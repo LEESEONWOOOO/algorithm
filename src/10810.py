@@ -1,24 +1,12 @@
-while True:
-    try:
-        N = int(input().strip())
-        break
-    except ValueError:
-        print("ERROR")
-while True:
-    try:
-        M = int(input().strip())
-        break
-    except ValueError:
-        print("ERROR")
-
-i = 0
-k = 0
-j = 0
+N, M = map(int, input().split())
+    # 첫번째 줄에서 N과 M을 입력받는다
+A = [0] * (N+1)
+    # 이가 N+1인 리스트를 생성하고 리스트의 모든 요소를 0으로 초기화
 
 for s in range(M):
-    i,j,k = int(input())
+    i, j, k = map(int, input().split())
+    for l in range(i, j + 1):
+        A[l] = k
 
-Arr = [i, j, k]
-
-## 환장하겠노; 2024-06-01
-
+for k in range(1, len(A)):
+    print(A[k], end=' ')
